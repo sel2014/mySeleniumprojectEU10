@@ -17,7 +17,6 @@ public class T1_StaleElementRefEx {
         //1. Open Chrome browser
 
         WebDriver driver = WebDriverFactory.getDriver("chrome");
-
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
