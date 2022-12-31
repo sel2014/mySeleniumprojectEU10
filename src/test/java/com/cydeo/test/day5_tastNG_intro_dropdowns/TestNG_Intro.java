@@ -13,7 +13,7 @@ public class TestNG_Intro {
         //ASSERT EQUALS: compare 2 of the same things
         String actual = "apple";
         String expected = "apple";
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(actual, expected, "your message will go here");
 
     }
 
