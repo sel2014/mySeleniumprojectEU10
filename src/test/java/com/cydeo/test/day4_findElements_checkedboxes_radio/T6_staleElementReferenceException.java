@@ -5,8 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.concurrent.TimeUnit;
-
 public class T6_staleElementReferenceException {
 
     public static void main(String[] args) {
@@ -16,7 +14,7 @@ public class T6_staleElementReferenceException {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
 
 
         //2- Go to: https://practice.cydeo.com/abtest
