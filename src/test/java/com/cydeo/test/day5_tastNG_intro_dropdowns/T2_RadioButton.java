@@ -22,10 +22,11 @@ public class T2_RadioButton {
 
         driver.get("https://practice.cydeo.com/radio_buttons ");
 
+        //3. Click to “Hockey” radio button
+
         WebElement hockeyRadioBtn = driver.findElement(By.xpath("//input[@id = " +
                 "'hockey']"));
 
-        //3. Click to “Hockey” radio button
         Thread.sleep(2000);
         hockeyRadioBtn.click();
         //4. Verify “Hockey” radio button is selected after clicking.
