@@ -25,11 +25,6 @@ public class T4_IframePractice {
         //2. Go to website: http://practice.cydeo.com/iframe
         driver.get("https://practice.cydeo.com/iframe");
 
-
-        //3. Go to: https://practice.cydeo.com/iframe
-        //4. Assert: “Your content goes here.” Text is displayed.
-        //5. Assert: “An iFrame containing the TinyMCE WYSIWYG Editor”
-
     }
    // @Ignore  TEST DOES NOT RUN
     @Test
@@ -41,6 +36,10 @@ public class T4_IframePractice {
 
         //OPTION 2 PASSING INDEX NUMBER OF iframe
        // driver.switchTo().frame(0);  //iframe to search how many iframes we have in html, type //iframe in search box
+
+        //3. Go to: https://practice.cydeo.com/iframe
+        //4. Assert: “Your content goes here.” Text is displayed.
+        //5. Assert: “An iFrame containing the TinyMCE WYSIWYG Editor”
 
         //last option
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']")));
