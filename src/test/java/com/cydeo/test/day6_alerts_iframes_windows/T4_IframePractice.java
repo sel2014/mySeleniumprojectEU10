@@ -31,12 +31,21 @@ public class T4_IframePractice {
         //5. Assert: “An iFrame containing the TinyMCE WYSIWYG Editor”
 
     }
+   // @Ignore  TEST DOES NOT RUN
     @Test
     public void iframe_test(){
 
         //we need to switch driver's focus to iframe
         //option 1 - switching iframe using id attribute value
-        driver.switchTo().frame("mce_0_ifr");
+       // driver.switchTo().frame("mce_0_ifr");
+
+        //OPTION 2 PASSING INDEX NUMBER OF iframe
+       // driver.switchTo().frame(0);  //iframe to search how many iframes we have in html, type //iframe in search box
+
+        //last option
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']")));
+
+
 
         //locate the p element
         WebElement yourContentGoesHereElement = driver.findElement(By.xpath("//p"));
