@@ -5,11 +5,27 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
 public class DropdownPractices {
+
+    public WebDriver driver;
+    @BeforeMethod
+    public void setupMethod() {
+
+        //2. Go to http://practice.cydeo.com/dropdown
+
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get("http://practice.cydeo.com/dropdown");
+
+
+    }
+
 
     @Test
     public void dropdown_task5() throws InterruptedException {
@@ -48,10 +64,15 @@ public class DropdownPractices {
 
         //Use all Select options. (visible text, value, index)
 
+        System.out.println("---------------------------------------------------------");
 
+    }
 
-
+    @Test
+    public void dropdown_task6() {
 
 
     }
+
+
 }
