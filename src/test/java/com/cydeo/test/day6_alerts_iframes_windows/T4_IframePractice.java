@@ -35,7 +35,8 @@ public class T4_IframePractice {
        // driver.switchTo().frame("mce_0_ifr");
 
         //OPTION 2 PASSING INDEX NUMBER OF iframe
-       // driver.switchTo().frame(0);  //iframe to search how many iframes we have in html, type //iframe in search box
+       // driver.switchTo().frame(0);  //iframe to search how many iframes we have in html, type
+        // iframe in search box
 
         //3. Go to: https://practice.cydeo.com/iframe
         //4. Assert: “Your content goes here.” Text is displayed.
