@@ -43,7 +43,7 @@ public class T4_IframePractice {
         //5. Assert: “An iFrame containing the TinyMCE WYSIWYG Editor”
 
         //last option
-        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']")));
+        driver.switchTo().frame(0);
 
 
 
