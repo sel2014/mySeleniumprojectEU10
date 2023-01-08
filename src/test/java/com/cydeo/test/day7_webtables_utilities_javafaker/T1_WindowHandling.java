@@ -44,8 +44,8 @@ public class T1_WindowHandling {
             if (driver.getCurrentUrl().equals("etsy")) {
                 break;
             }
-
         }
+
         //5. Assert: Title contains “Etsy”
         String actualTitle = driver.getTitle();
         String expectedInTitle = "Etsy";
