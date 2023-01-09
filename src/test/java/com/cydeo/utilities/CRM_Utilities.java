@@ -32,6 +32,8 @@ public class CRM_Utilities {
         loginButton.click();
     }
 
+    //-------------------------------------------------------------------------------------------
+
     public static void crm_login(WebDriver driver, String username, String password){
 
         //3. Enter valid username

@@ -40,7 +40,7 @@ public class BrowserUtils {
         for (String each : allWindowHandles) {
 
             driver.switchTo().window(each);
-            System.out.println("Current URL: " + driver.getCurrentUrl());
+            //System.out.println("Current URL: " + driver.getCurrentUrl());
 
             if (driver.getCurrentUrl().equals(expectedInUrl)) {
                 break;
