@@ -25,7 +25,7 @@ public class Driver {
     Create a re-usable utility method which will return same driver instance when we call it
      */
 
-    private static WebDriver getDriver(){
+    public static WebDriver getDriver(){
 
         if (driver == null){
              /*
@@ -33,6 +33,11 @@ public class Driver {
             This way, we can control which browser is opened from outside our code, from configuration.properties.
              */
             String browserType = ConfigurationReader.getProperty("browser");
+
+            /*
+                Depending on the browserType that will be return from configuration.properties file
+                switch statement will determine the case, and open the matching browser
+            */
 
             switch (browserType){
                 case "chrome":
