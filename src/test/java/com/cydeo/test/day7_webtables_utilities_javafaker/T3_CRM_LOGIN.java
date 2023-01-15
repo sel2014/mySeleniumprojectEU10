@@ -1,26 +1,15 @@
 package com.cydeo.test.day7_webtables_utilities_javafaker;
 
+import com.cydeo.test.base.TestBase;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.CRM_Utilities;
-import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
+public class  T3_CRM_LOGIN extends TestBase {
 
-public class T3_CRM_LOGIN {
 
-    WebDriver driver;
-
-    @BeforeMethod
-    public void setupMethod() {
-        driver = WebDriverFactory.getDriver("chrome");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
 
 
     //TC #3: Login scenario
@@ -51,7 +40,7 @@ public class T3_CRM_LOGIN {
         //6. Verify title is as expected:
         //Expected: Portal
 
-        BrowserUtils.verifyTitle(driver, "(1) My tasks");
+        BrowserUtils.verifyTitle(driver, "My tasks");
 
 
     }
@@ -69,7 +58,7 @@ public class T3_CRM_LOGIN {
         //6. Verify title is as expected:
         //Expected: Portal
 
-        BrowserUtils.verifyTitle(driver, "(1) My tasks");
+        BrowserUtils.verifyTitle(driver, "My tasks");
 
     }
 
