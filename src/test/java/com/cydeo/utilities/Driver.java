@@ -30,7 +30,8 @@ public class Driver {
         if (driver == null){
              /*
             We read our browserType from configuration.properties.
-            This way, we can control which browser is opened from outside our code, from configuration.properties.
+            This way, we can control which browser is opened from outside our code,
+             from configuration.properties.
              */
             String browserType = ConfigurationReader.getProperty("browser");
 
