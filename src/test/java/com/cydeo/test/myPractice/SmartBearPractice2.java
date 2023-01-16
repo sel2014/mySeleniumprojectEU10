@@ -27,9 +27,7 @@ public class SmartBearPractice2 {
         passwordButton.sendKeys("test");
 
         loginButton.click();
-
         //------------------------------------------------------
-
         WebElement orderButton = Driver.getDriver().findElement(By.xpath("//a[.='Order']"));
         orderButton.click();
 
@@ -45,9 +43,7 @@ public class SmartBearPractice2 {
         WebElement calculateButton = Driver.getDriver().findElement(By.xpath("//input[@value=" +
                 "'Calculate']"));
         calculateButton.click();
-
         //------------------------------------------------------
-
         WebElement nameButton = Driver.getDriver().findElement(By.xpath("//input[@id=" +
                 "'ctl00_MainContent_fmwOrder_txtName']"));
         WebElement streetButton = Driver.getDriver().findElement(By.xpath("//input[@id=" +
@@ -58,9 +54,7 @@ public class SmartBearPractice2 {
                 "'ctl00_MainContent_fmwOrder_TextBox4']"));
         WebElement zipButton = Driver.getDriver().findElement(By.xpath("//input[@id=" +
                 "'ctl00_MainContent_fmwOrder_TextBox5']"));
-
         //------------------------------------------------------
-
         Faker faker = new Faker();
         String name = faker.name().fullName();
         String street = faker.address().streetName();
@@ -69,19 +63,13 @@ public class SmartBearPractice2 {
         String zip = faker.numerify("########");
         String cardNumber = faker.finance().creditCard().replaceAll("-", "");
         String expiryDate = faker.numerify("08/10");
-
-
         //------------------------------------------------------
-
         nameButton.sendKeys(name);
         streetButton.sendKeys(street);
         cityButton.sendKeys(city);
         stateButton.sendKeys(state);
         zipButton.sendKeys(zip);
-
-
         //------------------------------------------------------
-
         WebElement visaButton = Driver.getDriver().findElement(By.xpath("//label[.='Visa']"));
         visaButton.click();
         WebElement cardNumberButton = Driver.getDriver().findElement(By.xpath("//input[@id=" +
@@ -89,19 +77,15 @@ public class SmartBearPractice2 {
 
         WebElement expiryDateButton = Driver.getDriver().findElement(By.xpath("//input[@id=" +
                 "'ctl00_MainContent_fmwOrder_TextBox1']"));
-
         //--------------------------------------------------------
-
         cardNumberButton.sendKeys(cardNumber);
         expiryDateButton.sendKeys((CharSequence) expiryDate);
-
         //--------------------------------------------------------
-
         WebElement processButton = Driver.getDriver().findElement(By.xpath("//a[@id=" +
                 "'ctl00_MainContent_fmwOrder_InsertButton']"));
 
         processButton.click();
-
+        //--------------------------------------------------------
         WebElement message = Driver.getDriver().findElement(By.xpath("//*[@id=" +
                 "'ctl00_MainContent_fmwOrder']/tbody/tr/td/div/strong"));
 
