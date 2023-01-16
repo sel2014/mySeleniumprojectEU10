@@ -14,10 +14,8 @@ public class SmartBearPractice2 {
     @Test
     public void orderPlacing() {
 
-        Driver.getDriver().get("http://secure.smartbearsoftware.com/samples/" +
-                "testcomplete12/WebOrders/login.aspx ");
-
         Driver.getDriver().get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx ");
+
         WebElement usernameButton = Driver.getDriver().findElement(By.xpath("//input[@id=" +
                 "'ctl00_MainContent_username']"));
         WebElement passwordButton = Driver.getDriver().findElement(By.xpath("//input[@id=" +
@@ -69,7 +67,7 @@ public class SmartBearPractice2 {
         String city = faker.address().city();
         String state = faker.address().state();
         String zip = faker.numerify("########");
-        String cardNumber = faker.finance().creditCard().replaceAll("-","");
+        String cardNumber = faker.finance().creditCard().replaceAll("-", "");
         String expiryDate = faker.numerify("08/10");
 
 
