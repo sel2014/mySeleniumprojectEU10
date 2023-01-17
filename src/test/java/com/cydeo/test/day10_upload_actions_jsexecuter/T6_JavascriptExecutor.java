@@ -1,5 +1,6 @@
 package com.cydeo.test.day10_upload_actions_jsexecuter;
 
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
@@ -13,7 +14,13 @@ public class T6_JavascriptExecutor {
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
-        js.executeScript("window.scrollBy(0,0)");
+        for (int i = 0; i < 10; i++) {
+            BrowserUtils.sleep(1);
+            js.executeScript("window.scrollBy(0,750)");
+        }
+
+
+
 
     }
 
