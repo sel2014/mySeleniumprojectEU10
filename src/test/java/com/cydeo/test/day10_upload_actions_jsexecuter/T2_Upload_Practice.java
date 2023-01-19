@@ -16,7 +16,8 @@ public class T2_Upload_Practice {
 
         String path = "C:\\Users\\sel20\\OneDrive\\Desktop\\HTML Class\\cybertruck.jpeg";
 
-        WebElement fileUpload = Driver.getDriver().findElement(By.xpath("//input[@id='file-upload']"));
+        WebElement fileUpload = Driver.getDriver().findElement(By.xpath(
+                "//input[@id='file-upload']"));
 
         BrowserUtils.sleep(2);
         fileUpload.sendKeys(path);

@@ -30,10 +30,13 @@ public class SmartBearPractice {
     public void linkVerification(){
 
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx ");
+
         WebElement usernameButton = driver.findElement(By.xpath("//input[@id=" +
                 "'ctl00_MainContent_username']"));
+
         WebElement passwordButton = driver.findElement(By.xpath("//input[@id=" +
                 "'ctl00_MainContent_password']"));
+
         WebElement loginButton = driver.findElement(By.xpath("//input[@id=" +
                 "'ctl00_MainContent_login_button']"));
 
