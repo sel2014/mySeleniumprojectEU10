@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class PolymerTest {
 
     @Test
-    public void validatePolymer(){
+    public void validatePolymer() {
 
         Driver.getDriver().get("http://todomvc.com/");
 
@@ -25,44 +25,31 @@ public class PolymerTest {
 
         WebElement todoBox = Driver.getDriver().findElement(By.xpath("//input[@id='new-todo']"));
 
-        BrowserUtils.sleep(2);
-        todoBox.sendKeys("Complete Java day49"+Keys.ENTER);
-        todoBox.sendKeys("Complete Selenium day10"+Keys.ENTER);
+        BrowserUtils.sleep(1);
+        todoBox.sendKeys("Complete Java day49" + Keys.ENTER);
+        BrowserUtils.sleep(1);
+        todoBox.sendKeys("Complete Selenium day10" + Keys.ENTER);
 
         //--------------------------------------------------------------------------------------------------------------
 
-
         WebElement toDoItemBox2 = Driver.getDriver().findElement(By.xpath("(//label[@class='style-scope td-item'])[2]"));
+
+        // System.out.println("toDoItemBox2.getText() = " + toDoItemBox2.getText());
 
         Actions actions = new Actions(Driver.getDriver());
 
-        BrowserUtils.sleep(2);
-        actions.moveToElement(toDoItemBox2).doubleClick().perform();
+        BrowserUtils.sleep(1);
+        actions.moveToElement(toDoItemBox2).doubleClick().doubleClick().perform();
 
-        WebElement toDoItemBox2edit = Driver.getDriver().findElement(By.xpath("//input[@id='edit']"));
+        WebElement toDoItemBox2New = Driver.getDriver().findElement(By.xpath("//input[@id='edit']"));
 
-        toDoItemBox2edit.sendKeys(Keys.chord(Keys.CONTROL,"a"));
-
-
-        BrowserUtils.sleep(2);
-        toDoItemBox2edit.sendKeys(Keys.DELETE);
-        toDoItemBox2edit.sendKeys("Complete Selenium day9 and day10");
+        toDoItemBox2New.sendKeys(Keys.DELETE);
+        BrowserUtils.sleep(1);
+        toDoItemBox2New.sendKeys("Complete Selenium day9 and day10");
 
 
 
-
-
-
-
-        //secondToDoItemBox.sendKeys("Complete Selenium day9");
-
-        //WebElement secondToDoBoxCheckBox = Driver.getDriver().findElement(By.xpath("(//input[@class='toggle style-scope td-item'])[2]"));
-
-        //secondToDoBoxCheckBox.click();
     }
-
-
-
 
 }
 
