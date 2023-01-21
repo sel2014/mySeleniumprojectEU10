@@ -16,16 +16,15 @@ public class T5_ScrollUp {
 
         Actions actions = new Actions(Driver.getDriver());
 
-        BrowserUtils.sleep(2);
-        WebElement poweredByCydeoLink = Driver.getDriver().findElement(By.xpath(
-                "//*[@id=\"page-footer\"]/div/div"));
+        BrowserUtils.sleep(1);
+        WebElement poweredByCydeoLink = Driver.getDriver().findElement(By.linkText("CYDEO"));
 
         actions.moveToElement(poweredByCydeoLink).perform();
 
         //----------------------------------------------------------------------
 
-        WebElement homeLink = Driver.getDriver().findElement(By.xpath("//*[text()='Home']"));
-        BrowserUtils.sleep(2);
+        WebElement homeLink = Driver.getDriver().findElement(By.linkText("Home"));
+        BrowserUtils.sleep(1);
         actions.moveToElement(homeLink).perform();
 
 
@@ -34,7 +33,7 @@ public class T5_ScrollUp {
 /*
 /*
 TC #4: Scroll practice
-1- Open a chrome browser
+1- Open a Chrome browser
 2- Go to: https://practice.cydeo.com/
 3- Scroll down to “Powered by CYDEO”
 4- Scroll using Actions class “moveTo(element)” method
