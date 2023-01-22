@@ -14,8 +14,8 @@ public class T7_JavascriptExecutor_Scroll {
 
         Driver.getDriver().get("https://practice.cydeo.com/large");
 
-        WebElement cydeoLink = Driver.getDriver().findElement(By.xpath("//*[text()='CYDEO']"));
-        WebElement homeLink = Driver.getDriver().findElement(By.xpath("//*[text()='Home']"));
+        WebElement cydeoLink = Driver.getDriver().findElement(By.linkText("CYDEO"));
+        WebElement homeLink = Driver.getDriver().findElement(By.linkText("Home"));
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
@@ -25,8 +25,13 @@ public class T7_JavascriptExecutor_Scroll {
         BrowserUtils.sleep(2);
         js.executeScript("arguments[0].scrollIntoView(true)", homeLink);
 
+        Driver.closeDriver();
+
+
+
 
     }
+
 
 
 }
