@@ -85,10 +85,6 @@ a. Title equals: “Gas Mileage Calculator”
 b. “Gas Mileage Calculator” label is displayed
 
 
-
-
-
-
 6. Locate, clear and type “7925” into “Current odometer” field
 7. Locate, clear and type “7550” into “Previous odometer” field
 8. Locate, clear and type “16” into “Gas added” field
