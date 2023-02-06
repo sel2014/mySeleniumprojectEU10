@@ -7,9 +7,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class EvrekaTask {
 
     @Test
@@ -33,6 +30,11 @@ public class EvrekaTask {
 
         searchBox.sendKeys("iPhone13 512" + Keys.ENTER);
 
+        WebElement resultText = Driver.getDriver().findElement(By.xpath("//div[@class=" +
+                "'a-section a-spacing-small a-spacing-top-small']"));
+
+        System.out.println(resultText.getText());
+
         WebElement iPhone13Button = Driver.getDriver().findElement(By.xpath("(//span[@class=" +
                 "'a-size-base-plus a-color-base a-text-normal'])[1]"));
 
@@ -42,11 +44,13 @@ public class EvrekaTask {
 
         WebElement productTitle = Driver.getDriver().findElement(By.xpath("//span[@id='productTitle']"));
 
-        WebElement colourBox = Driver.getDriver().findElement(By.xpath("//img[@alt = 'Mavi']"));
+        WebElement colourBox = Driver.getDriver().findElement(By.xpath("//img[@alt = 'Yıldız Işığı']"));
 
         colourBox.click();
 
-        WebElement colour = Driver.getDriver().findElement(By.xpath("//*[.='Mavi']"));
+        WebElement colour = Driver.getDriver().findElement(By.xpath("//*[.='Yıldız Işığı']"));
+
+        WebElement size = Driver.getDriver().findElement(By.xpath("//p[.='512 GB']"));
 
         WebElement priceWhole = Driver.getDriver().findElement(By.xpath("//span[@class='a-price-whole']"));
 
@@ -59,17 +63,22 @@ public class EvrekaTask {
 
         String totalPrice = priceWhole.getText() + "," + priceFraction.getText() + priceSymbol.getText();
 
-        List<WebElement> list = new ArrayList<>();
+//        List<WebElement> list = new ArrayList<>();
+//
+//        list.add(productTitle);
+//        list.add(colour);
+//        list.add(stockBox);
+//
+//        for (WebElement eachElement : list) {
+//
+//            System.out.println(eachElement.getText());
+//        }
+//        System.out.println(totalPrice);
 
-        list.add(productTitle);
-        list.add(colour);
-        list.add(stockBox);
-
-        for (WebElement eachElement : list) {
-
-            System.out.println(eachElement.getText());
-        }
-        System.out.println(totalPrice);
+        //System.out.println(resultText.getText());
+        System.out.println(productTitle.getText()+"       "+"Size:"+size.getText());
+        System.out.println("Colour:"+colour.getText()+"        "+"Price:"+totalPrice);
+        System.out.println(stockBox.getText());
 
 
     }
