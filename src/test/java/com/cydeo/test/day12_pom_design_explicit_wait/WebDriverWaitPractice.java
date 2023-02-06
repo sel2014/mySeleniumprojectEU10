@@ -1,5 +1,6 @@
 package com.cydeo.test.day12_pom_design_explicit_wait;
 
+import com.cydeo.pages.DynamicLoad1Page;
 import com.cydeo.pages.DynamicLoad7Page;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -44,7 +45,13 @@ public class WebDriverWaitPractice {
         //1. Go to https://practice.cydeo.com/dynamic_loading/1
 
         Driver.getDriver().get("https://practice.cydeo.com/dynamic_loading/1  ");
+
+        DynamicLoad1Page dynamicLoad1Page = new DynamicLoad1Page();
         //2. Click to start
+
+        dynamicLoad1Page.startButton.click();
+
+
         //3. Wait until loading bar disappears
         //4. Assert username inputbox is displayed
         //5. Enter username: tomsmith
