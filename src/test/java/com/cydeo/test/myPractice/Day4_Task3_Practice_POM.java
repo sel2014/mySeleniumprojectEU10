@@ -1,11 +1,11 @@
 package com.cydeo.test.myPractice;
 
-import com.cydeo.myPages.Day4_Task3;
+import com.cydeo.myPracticePages.Day4_Task3;
 import com.cydeo.utilities.Driver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Day4_Task3_Practice {
+public class Day4_Task3_Practice_POM {
 
     @Test
     public void verify_displayed_text(){

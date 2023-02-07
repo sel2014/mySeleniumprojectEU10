@@ -1,4 +1,4 @@
-package com.cydeo.myPages;
+package com.cydeo.myPracticePages;
 
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.WebElement;
