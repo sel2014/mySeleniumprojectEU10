@@ -12,6 +12,9 @@ public class DoubleClickPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(xpath = "//*[@id='accept-choices']")
+    public WebElement acceptCookies;
+
     @FindBy(id = "demo")
     public WebElement textToDoubleClick;
 }
