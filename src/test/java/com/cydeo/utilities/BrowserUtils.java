@@ -66,7 +66,7 @@ public class BrowserUtils {
 
 
     /*
-    Creating a utility method for ExplicitWait so we dont have to repeat the lines
+    Creating a utility method for ExplicitWait so we don't have to repeat the lines
      */
     public static void waitForInvisibilityOf(WebElement webElement){
 

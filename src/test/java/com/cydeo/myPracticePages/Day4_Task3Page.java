@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Day4_Task3 {
+public class Day4_Task3Page {
 
 
-    public Day4_Task3(){
+    public Day4_Task3Page(){
 
         PageFactory.initElements(Driver.getDriver(), this);
 
