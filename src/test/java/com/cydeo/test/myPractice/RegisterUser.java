@@ -36,7 +36,7 @@ public class RegisterUser {
 
         //6. Enter name and email address
         registerUserPage.nameBox.sendKeys("Name Surname");
-        registerUserPage.emailBox.sendKeys("new22@email.com");
+        registerUserPage.emailBox.sendKeys("new25@email.com");
 
         BrowserUtils.sleep(2);
 
@@ -56,7 +56,7 @@ public class RegisterUser {
 
         Select day = new Select(Driver.getDriver().findElement
                 (By.xpath("//select[@id='days']")));
-        day.selectByIndex(3);
+        day.selectByIndex(4);
 
 
         Select month = new Select(Driver.getDriver().findElement
@@ -106,15 +106,11 @@ public class RegisterUser {
         //15. Click 'Continue' button
         registerUserPage.continueButton.click();
 
-        BrowserUtils.sleep(2);
+       // Driver.getDriver().switchTo().frame("ad_iframe");
 
 
-        Driver.getDriver().switchTo().frame("ad_iframe");
 
-        registerUserPage.iframeDismiss.click();
-        BrowserUtils.sleep(2);
 
-        Driver.getDriver().switchTo().parentFrame();
 
 
 
