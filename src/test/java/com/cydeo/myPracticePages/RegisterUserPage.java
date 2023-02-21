@@ -16,8 +16,17 @@ public class RegisterUserPage {
     @FindBy(tagName = "h1")
     public WebElement pageTitle;
 
+    @FindBy(xpath = "//div[@class='logo pull-left']")
+    public WebElement pageLogo;
+
     @FindBy(xpath = "//a[@href='/login'] ")
-    public WebElement SignupLoginButton;
+    public WebElement signupLoginButton;
+
+    @FindBy(xpath = "//h2[.=\"Login to your account\"]")
+    public WebElement loginToYourAccountText;
+
+    @FindBy(xpath = "//*[.='Login']")
+    public WebElement loginButton;
 
     @FindBy(xpath = "//*[.='New User Signup!']")
     public WebElement newUserSignup;
@@ -26,7 +35,13 @@ public class RegisterUserPage {
     public WebElement nameBox;
 
     @FindBy(xpath = "(//input[@placeholder='Email Address'])[2]")
-    public WebElement emailBox;
+    public WebElement newUserEmailBox;
+
+    @FindBy(xpath = "(//input[@placeholder='Email Address'])[1]")
+    public WebElement loginEmailBox;
+
+    @FindBy(xpath = "//input[@data-qa='login-password']")
+    public WebElement loginPassword;
 
     @FindBy(xpath = "//button[@data-qa='signup-button']")
     public WebElement signupButton;
@@ -86,6 +101,25 @@ public class RegisterUserPage {
 
     @FindBy(xpath = "(//a[@href='/'])[3]")
     public WebElement continueButton;
+
+    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[10]/a/b")
+    public WebElement loggedInAsUserNameText;
+
+    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a")
+    public WebElement deleteAccountButton;
+
+    @FindBy(xpath = "(//*[.='Account Deleted!'])[2]")
+    public WebElement accountDeletedMessage;
+
+    @FindBy(id = "dismiss-button")
+    public WebElement dismissButton;
+
+
+
+
+
+
+
 
 
 
