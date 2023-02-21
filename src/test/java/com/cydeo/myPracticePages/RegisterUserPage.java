@@ -99,7 +99,7 @@ public class RegisterUserPage {
     @FindBy(xpath = "(//h2)[1]")
     public WebElement accountCreatedMessage;
 
-    @FindBy(xpath = "(//a[@href='/'])[3]")
+    @FindBy(xpath = "//a[.='Continue']")
     public WebElement continueButton;
 
     @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[10]/a/b")

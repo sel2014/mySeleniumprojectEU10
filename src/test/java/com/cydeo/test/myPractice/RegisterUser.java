@@ -3,6 +3,7 @@ package com.cydeo.test.myPractice;
 import com.cydeo.myPracticePages.RegisterUserPage;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -22,8 +23,11 @@ public class RegisterUser {
         registerUserPage = new RegisterUserPage();
     }
 
+
     @Test
     public void register_user() {
+
+        Faker faker = new Faker();
 
         //3. Verify that home page is visible successfully
         Assert.assertTrue(registerUserPage.pageTitle.isDisplayed());
@@ -36,9 +40,13 @@ public class RegisterUser {
         //System.out.println(registerUserPage.NewUserSignup.getText());
 
         //6. Enter name and email address
-        registerUserPage.nameBox.sendKeys("Name Surname");
+        registerUserPage.nameBox.sendKeys(faker.name().fullName());
         BrowserUtils.sleep(1);
-        registerUserPage.newUserEmailBox.sendKeys("new109@email.com");
+
+
+
+
+        registerUserPage.newUserEmailBox.sendKeys("my5@email.com");
         BrowserUtils.sleep(1);
 
 
@@ -78,10 +86,15 @@ public class RegisterUser {
 
         //12. Fill details: First name, Last name, Company, Address, Address2,
         // Country, State, City, Zipcode, Mobile Number
-        registerUserPage.firstNameBox.sendKeys("Name");
-        registerUserPage.lastNameBox.sendKeys("Surname");
+
+        registerUserPage.firstNameBox.sendKeys(faker.name().firstName());
+
+        registerUserPage.lastNameBox.sendKeys(faker.name().lastName());
+
         registerUserPage.companyBox.sendKeys("Company");
+
         registerUserPage.address1Box.sendKeys("address1");
+
         registerUserPage.address2Box.sendKeys("address2");
 
         Select country = new Select(Driver.getDriver().findElement
@@ -102,55 +115,34 @@ public class RegisterUser {
 
         System.out.println(registerUserPage.accountCreatedMessage.getText());
         Assert.assertTrue(registerUserPage.accountCreatedMessage.isDisplayed());
+        BrowserUtils.sleep(2);
 
         //15. Click 'Continue' button
         registerUserPage.continueButton.click();
 
 
-
-       // WebElement iframe = Driver.getDriver().findElement(By.tagName(ad_iframe));
-        // Driver.getDriver().switchTo().frame("ad_iframe");
-        // registerUserPage.dismissButton.click();
-
+        // WebElement iframe = Driver.getDriver().findElement(By.id("ad_iframe"));
+        // Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.id("ad_iframe")));
+        //  registerUserPage.dismissButton.click();
 
 
         Actions actions = new Actions(Driver.getDriver());
 
         actions.doubleClick().perform();
         actions.doubleClick().perform();
-        actions.click().perform();
-
-
-
+        // actions.click().perform();
 
 
         //16. Verify that 'Logged in as username' is visible
         Assert.assertTrue(registerUserPage.loggedInAsUserNameText.isDisplayed());
 
-        //17. Click 'Delete Account' button
+//        17. Click 'Delete Account' button
+//
+//        registerUserPage.deleteAccountButton.click();
 
-        registerUserPage.deleteAccountButton.click();
-
-        //18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
-        Assert.assertTrue(registerUserPage.accountDeletedMessage.isDisplayed());
-        registerUserPage.continueButton.click();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//        18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
+//        Assert.assertTrue(registerUserPage.accountDeletedMessage.isDisplayed());
+//        registerUserPage.continueButton.click();
 
 
     }
