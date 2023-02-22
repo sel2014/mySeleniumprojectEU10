@@ -43,12 +43,8 @@ public class RegisterUser {
         registerUserPage.nameBox.sendKeys(faker.name().fullName());
         BrowserUtils.sleep(1);
 
-
-
-
-        registerUserPage.newUserEmailBox.sendKeys("my5@email.com");
+        registerUserPage.newUserEmailBox.sendKeys("my7@email.com");
         BrowserUtils.sleep(1);
-
 
         //7. Click 'Signup' button
         registerUserPage.signupButton.click();
@@ -62,7 +58,6 @@ public class RegisterUser {
         registerUserPage.titleMr.click();
 
         registerUserPage.password.sendKeys("password");
-
 
         Select day = new Select(Driver.getDriver().findElement
                 (By.xpath("//select[@id='days']")));
@@ -119,11 +114,6 @@ public class RegisterUser {
 
         //15. Click 'Continue' button
         registerUserPage.continueButton.click();
-
-
-        // WebElement iframe = Driver.getDriver().findElement(By.id("ad_iframe"));
-        // Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.id("ad_iframe")));
-        //  registerUserPage.dismissButton.click();
 
 
         Actions actions = new Actions(Driver.getDriver());

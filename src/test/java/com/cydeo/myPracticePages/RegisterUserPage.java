@@ -102,7 +102,7 @@ public class RegisterUserPage {
     @FindBy(xpath = "//a[.='Continue']")
     public WebElement continueButton;
 
-    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[10]/a/b")
+    @FindBy(xpath = "//i[@class='fa fa-user']")
     public WebElement loggedInAsUserNameText;
 
     @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a")
