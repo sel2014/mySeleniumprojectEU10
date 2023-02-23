@@ -11,7 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class RegisterUser {
+public class TestCase1_RegisterUser {
 
     RegisterUserPage registerUserPage;
 
@@ -43,7 +43,7 @@ public class RegisterUser {
         registerUserPage.nameBox.sendKeys(faker.name().fullName());
         BrowserUtils.sleep(1);
 
-        registerUserPage.newUserEmailBox.sendKeys("my7@email.com");
+        registerUserPage.newUserEmailBox.sendKeys("my9@email.com");
         BrowserUtils.sleep(1);
 
         //7. Click 'Signup' button

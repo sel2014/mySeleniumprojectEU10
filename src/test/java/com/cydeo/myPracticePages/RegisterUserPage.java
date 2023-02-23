@@ -114,6 +114,9 @@ public class RegisterUserPage {
     @FindBy(id = "dismiss-button")
     public WebElement dismissButton;
 
+    @FindBy(xpath = "//p[.='Your email or password is incorrect!']")
+    public WebElement yourEmailOrPasswordIsIncorrectMessage;
+
 
 
 
