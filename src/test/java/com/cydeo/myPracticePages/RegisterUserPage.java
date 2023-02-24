@@ -16,9 +16,6 @@ public class RegisterUserPage {
     @FindBy(tagName = "h1")
     public WebElement pageTitle;
 
-    @FindBy(xpath = "//div[@class='logo pull-left']")
-    public WebElement pageLogo;
-
     @FindBy(xpath = "//a[@href='/login'] ")
     public WebElement signupLoginButton;
 
@@ -111,8 +108,8 @@ public class RegisterUserPage {
     @FindBy(xpath = "(//*[.='Account Deleted!'])[2]")
     public WebElement accountDeletedMessage;
 
-    @FindBy(id = "dismiss-button")
-    public WebElement dismissButton;
+//    @FindBy(id = "dismiss-button")
+//    public WebElement dismissButton;
 
     @FindBy(xpath = "//p[.='Your email or password is incorrect!']")
     public WebElement yourEmailOrPasswordIsIncorrectMessage;
