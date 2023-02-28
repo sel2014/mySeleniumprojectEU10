@@ -1,6 +1,6 @@
 package com.cydeo.test.myPractice;
 
-import com.cydeo.myPracticePages.RegisterUserPage;
+import com.cydeo.myPracticePages.AutomationPracticePage;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import com.github.javafaker.Faker;
@@ -13,14 +13,14 @@ import org.testng.annotations.Test;
 
 public class TestCase1_RegisterUser {
 
-    RegisterUserPage registerUserPage;
+    AutomationPracticePage automationPracticePage;
 
 
     @BeforeMethod
     public void setupMethod() {
 
         Driver.getDriver().get("https://www.automationexercise.com/");
-        registerUserPage = new RegisterUserPage();
+        automationPracticePage = new AutomationPracticePage();
     }
 
 
@@ -30,34 +30,34 @@ public class TestCase1_RegisterUser {
         Faker faker = new Faker();
 
         //3. Verify that home page is visible successfully
-        Assert.assertTrue(registerUserPage.pageTitle.isDisplayed());
+        Assert.assertTrue(automationPracticePage.pageTitle.isDisplayed());
 
         //4. Click on 'Signup / Login' button
-        registerUserPage.signupLoginButton.click();
+        automationPracticePage.signupLoginButton.click();
 
         //5. Verify 'New User Signup!' is visible
-        Assert.assertTrue(registerUserPage.newUserSignup.isDisplayed());
+        Assert.assertTrue(automationPracticePage.newUserSignup.isDisplayed());
         //System.out.println(registerUserPage.NewUserSignup.getText());
 
         //6. Enter name and email address
-        registerUserPage.nameBox.sendKeys(faker.name().fullName());
+        automationPracticePage.nameBox.sendKeys(faker.name().fullName());
         BrowserUtils.sleep(1);
 
-        registerUserPage.newUserEmailBox.sendKeys("my9@email.com");
+        automationPracticePage.newUserEmailBox.sendKeys("my11@email.com");
         BrowserUtils.sleep(1);
 
         //7. Click 'Signup' button
-        registerUserPage.signupButton.click();
+        automationPracticePage.signupButton.click();
         BrowserUtils.sleep(1);
 
         //8. Verify that 'ENTER ACCOUNT INFORMATION' is visible
-        Assert.assertTrue(registerUserPage.enterAccountInformation.isDisplayed());
+        Assert.assertTrue(automationPracticePage.enterAccountInformation.isDisplayed());
         //System.out.println(registerUserPage.enterAccountInformation.getText());
 
         //9. Fill details: Title, Name, Email, Password, Date of birth
-        registerUserPage.titleMr.click();
+        automationPracticePage.titleMr.click();
 
-        registerUserPage.password.sendKeys("password");
+        automationPracticePage.password.sendKeys("password");
 
         Select day = new Select(Driver.getDriver().findElement
                 (By.xpath("//select[@id='days']")));
@@ -74,46 +74,46 @@ public class TestCase1_RegisterUser {
         year.selectByVisibleText("2000");
 
         //10. Select checkbox 'Sign up for our newsletter!
-        registerUserPage.newsLetterBox.click();
+        automationPracticePage.newsLetterBox.click();
 
         //11. Select checkbox 'Receive special offers from our partners!
-        registerUserPage.specialOffersBox.click();
+        automationPracticePage.specialOffersBox.click();
 
         //12. Fill details: First name, Last name, Company, Address, Address2,
         // Country, State, City, Zipcode, Mobile Number
 
-        registerUserPage.firstNameBox.sendKeys(faker.name().firstName());
+        automationPracticePage.firstNameBox.sendKeys(faker.name().firstName());
 
-        registerUserPage.lastNameBox.sendKeys(faker.name().lastName());
+        automationPracticePage.lastNameBox.sendKeys(faker.name().lastName());
 
-        registerUserPage.companyBox.sendKeys("Company");
+        automationPracticePage.companyBox.sendKeys("Company");
 
-        registerUserPage.address1Box.sendKeys("address1");
+        automationPracticePage.address1Box.sendKeys("address1");
 
-        registerUserPage.address2Box.sendKeys("address2");
+        automationPracticePage.address2Box.sendKeys("address2");
 
         Select country = new Select(Driver.getDriver().findElement
                 (By.xpath("//select[@id='country']")));
 
         country.selectByVisibleText("Canada");
 
-        registerUserPage.stateBox.sendKeys("State");
+        automationPracticePage.stateBox.sendKeys("State");
 
-        registerUserPage.cityBox.sendKeys("City");
-        registerUserPage.zipCodeBox.sendKeys("Zipcode");
-        registerUserPage.mobileNumberBox.sendKeys("01223456456");
+        automationPracticePage.cityBox.sendKeys("City");
+        automationPracticePage.zipCodeBox.sendKeys("Zipcode");
+        automationPracticePage.mobileNumberBox.sendKeys("01223456456");
 
         //13. Click 'Create Account button
-        registerUserPage.createAccountButton.click();
+        automationPracticePage.createAccountButton.click();
 
         //14. Verify that 'ACCOUNT CREATED!' is visible
 
-        System.out.println(registerUserPage.accountCreatedMessage.getText());
-        Assert.assertTrue(registerUserPage.accountCreatedMessage.isDisplayed());
+        System.out.println(automationPracticePage.accountCreatedMessage.getText());
+        Assert.assertTrue(automationPracticePage.accountCreatedMessage.isDisplayed());
         BrowserUtils.sleep(2);
 
         //15. Click 'Continue' button
-        registerUserPage.continueButton.click();
+        automationPracticePage.continueButton.click();
 
 
         Actions actions = new Actions(Driver.getDriver());
@@ -124,7 +124,7 @@ public class TestCase1_RegisterUser {
 
 
         //16. Verify that 'Logged in as username' is visible
-        Assert.assertTrue(registerUserPage.loggedInAsUserNameText.isDisplayed());
+        Assert.assertTrue(automationPracticePage.loggedInAsUserNameText.isDisplayed());
 
 //        17. Click 'Delete Account' button
 //

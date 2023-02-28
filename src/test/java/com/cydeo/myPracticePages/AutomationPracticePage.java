@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class RegisterUserPage {
+public class AutomationPracticePage {
 
-    public RegisterUserPage(){
+    public AutomationPracticePage(){
 
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -16,8 +16,11 @@ public class RegisterUserPage {
     @FindBy(tagName = "h1")
     public WebElement pageTitle;
 
-    @FindBy(xpath = "//a[@href='/login'] ")
-    public WebElement signupLoginButton;
+ @FindBy(xpath = "(//h2)[1]")
+ public WebElement loginPageTitle;
+
+   @FindBy(xpath = "/html/body/header/div/div/div/div[2]/div/ul/li[4]/a")
+   public WebElement signupLoginButton;
 
     @FindBy(xpath = "//h2[.=\"Login to your account\"]")
     public WebElement loginToYourAccountText;
@@ -102,7 +105,7 @@ public class RegisterUserPage {
     @FindBy(xpath = "//i[@class='fa fa-user']")
     public WebElement loggedInAsUserNameText;
 
-    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a")
+    @FindBy(xpath = "(//h2)[1]")
     public WebElement deleteAccountButton;
 
     @FindBy(xpath = "(//*[.='Account Deleted!'])[2]")
@@ -113,6 +116,9 @@ public class RegisterUserPage {
 
     @FindBy(xpath = "//p[.='Your email or password is incorrect!']")
     public WebElement yourEmailOrPasswordIsIncorrectMessage;
+
+    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")
+    public WebElement logoutButton;
 
 
 
